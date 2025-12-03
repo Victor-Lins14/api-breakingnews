@@ -3,6 +3,8 @@ const userRoute = require('./src/routes/user.route')
 
 const app = express()
 
-app.use('/soma', userRoute)
+const port = 3000;
 
-app.listen(3000)
+app.use('/user', userRoute)
+
+app.listen(port, () => console.log(`Servidor rodando na porta ${port}`))
